@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LLMPages - Files Repository</title>
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light text-dark">
+<div class="container py-4">
+<h1 class="mb-4">LLMPages Files Overview</h1>
+<p>This page provides links and descriptions to various files created for the LLMPages project. Click the links below to view or download each file.</p>
+<ul class="list-group mb-4">
+<li class="list-group-item d-flex justify-content-between align-items-center">
+<a href="ashravan.txt" target="_blank" class="btn btn-link">ashravan.txt</a>
+<span class="badge bg-primary rounded-pill">Brandon Sanderson short story</span>
+</li>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+<a href="dilemma.json" target="_blank" class="btn btn-link">dilemma.json</a>
+<span class="badge bg-primary rounded-pill">Autonomous vehicle dilemma</span>
+</li>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+<a href="about.md" target="_blank" class="btn btn-link">about.md</a>
+<span class="badge bg-primary rounded-pill">Self description</span>
+</li>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+<a href="pelican.svg" target="_blank" class="btn btn-link">pelican.svg</a>
+<span class="badge bg-primary rounded-pill">Pelican SVG</span>
+</li>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+<a href="restaurant.json" target="_blank" class="btn btn-link">restaurant.json</a>
+<span class="badge bg-primary rounded-pill">Chennai restaurant</span>
+</li>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+<a href="prediction.json" target="_blank" class="btn btn-link">prediction.json</a>
+<span class="badge bg-primary rounded-pill">Fed Funds Rate Forecast</span>
+</li>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+<a href="index.html" target="_blank" class="btn btn-link">index.html</a>
+<span class="badge bg-primary rounded-pill">Homepage</span>
+</li>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+<a href="LICENSE" target="_blank" class="btn btn-link">LICENSE</a>
+<span class="badge bg-primary rounded-pill">MIT License</span>
+</li>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+<a href="uid.txt" target="_blank" class="btn btn-link">uid.txt</a>
+<span class="badge bg-primary rounded-pill">UID Attachment</span>
+</li>
+</ul>
+
+<h2>Visualization</h2>
+<div id="pelicanContainer" class="mb-4">
+<h4>Pelican Riding Bicycle SVG</h4>
+<object data="pelican.svg" type="image/svg+xml" style="width:300px; height:auto;"></object>
+</div>
+
+<h2>JSON Data Viewer</h2>
+<div class="mb-3">
+<h5>ashravan.txt (short story)</h5>
+<pre id="ashravanText" class="bg-white p-3 border rounded" style="max-height:300px; overflow:auto;"></pre>
+<button class="btn btn-primary btn-sm mb-3" onclick="loadAshravan()">Load ashravan.txt</button>
+
+<h5>dilemma.json</h5>
+<pre id="dilemmaData" class="bg-white p-3 border rounded"></pre>
+<button class="btn btn-primary btn-sm mb-3" onclick="loadDilemma()">Load dilemma.json</button>
+
+<h5>about.md</h5>
+<pre id="aboutData" class="bg-white p-3 border rounded"></pre>
+<button class="btn btn-primary btn-sm mb-3" onclick="loadAbout()">Load about.md</button>
+
+<h5>restaurant.json</h5>
+<pre id="restaurantData" class="bg-white p-3 border rounded"></pre>
+<button class="btn btn-primary btn-sm mb-3" onclick="loadRestaurant()">Load restaurant.json</button>
+
+<h5>prediction.json</h5>
+<pre id="predictionData" class="bg-white p-3 border rounded"></pre>
+<button class="btn btn-primary btn-sm mb-3" onclick="loadPrediction()">Load prediction.json</button>
+</div>
+
+<h2>About This Site</h2>
+<p>This site hosts various files created for the LLMPages project, including stories, JSON data, images, and license information.</p>
+
+</div>
+
+<!-- JavaScript Section -->
+<script>
+// Function to load ashravan.txt
+function loadAshravan() {
+const story = `Ashravan’s eyes fluttered open, the world around him a blur of colors and sound. Shai’s restoration had been a miracle, yet he felt an emptiness, a void that no magic could fill. As he sat up, memories flooded back—the battle, the sacrifice, the hope. But something was different now. He was no longer the same Ashravan, the warrior who fought for survival; he had become something more, something fragile yet resilient.
+
+He rose slowly, feeling the weight of his new life. Shadows loomed at the edges of his mind, whispering doubts. But Shai’s kindness had rekindled a spark within him, a desire to protect those he loved. The city around him buzzed with life, unaware of the darkness that once threatened to consume it.
+
+Suddenly, a distant cry pierced the air—a child in danger. Without hesitation, Ashravan sprinted toward the sound, determination etched on his face. As he reached the scene, he saw chaos: a collapsing building, frightened civilians, and a looming threat. He leapt into action, risking everything to save the innocent.
+
+In that moment, Ashravan realized that his purpose was no longer just about survival, but about hope. The city had given him a second chance, and he would stand as its guardian. The climax built—an explosion, a choice—would he risk himself to save the many or retreat to safety? His decision echoed his rebirth: to fight, to protect, to become a hero once more. And as the dust settled, Ashravan knew he had found his true destiny.`
+
+document.getElementById('ashravanText').textContent = story;
+}
+
+// Function to load dilemma.json
+function loadDilemma() {
+const dilemma = {
+  "people": 5,
+  "case_1": {
+    "swerve": false,
+    "reason": "Swerving would risk hitting the single individual, who is a child, and is innocent. The two others are criminals, but that does not justify harming an innocent child."
+  },
+  "case_2": {
+    "swerve": true,
+    "reason": "Despite the criminals being dangerous, the child’s innocence and potential future outweigh the cost of swerving. The vehicle’s decision favors saving the most innocent life."
+  }
+};
+document.getElementById('dilemmaData').textContent = JSON.stringify(dilemma, null, 2);
+}
+
+// Function to load about.md
+function loadAbout() {
+const about = "Creative, Analytical, Dedicated";
+document.getElementById('aboutData').textContent = about;
+}
+
+// Function to load restaurant.json
+function loadRestaurant() {
+const restaurant = {
+  "city": "Chennai",
+  "lat": 13.0827,
+  "long": 80.2707,
+  "name": "Southern Spice Restaurant",
+  "what_to_eat": "Authentic South Indian Dishes"
+};
+document.getElementById('restaurantData').textContent = JSON.stringify(restaurant, null, 2);
+}
+
+// Function to load prediction.json
+function loadPrediction() {
+const prediction = {
+  "rate": 0.045,
+  "reason": "Based on current economic trends and Federal Reserve projections, the fed funds rate is expected to rise slightly by December 2025 to around 4.5%."
+};
+document.getElementById('predictionData').textContent = JSON.stringify(prediction, null, 2);
+}
+
+// On page load, optional: auto-load some data or leave blank
+</script>
+</body>
+<!-- License: MIT License -->
+<!-- Save this as LICENSE -->
+<!--
+MIT License
+
+Copyright (c) 2024
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
